@@ -161,3 +161,4 @@ cython_debug/
 *.txt
 *.mp4
 !requirements.txt
+config.json

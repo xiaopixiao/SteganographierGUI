@@ -158,7 +158,7 @@ class SteganographierGUI:
         self._7z_exe                = os.path.join(application_path,'tools','7z.exe')
         self.hash_modifier_exe      = os.path.join(application_path,'tools','hash_modifier.exe')
         self.captcha_generator_exe  = os.path.join(application_path,'tools','captcha_generator.exe')
-        self.title = "隐写者 Ver.1.2.5 GUI 作者: 层林尽染"
+        self.title = "隐写者 Ver.1.2.5 GUI"
         self.total_file_size = None     # 被隐写文件总大小
         self.password = None            # 密码
         self.password_modified = False  # 追踪密码是否被用户修改过
@@ -307,7 +307,7 @@ class SteganographierGUI:
                                 yscrollcommand=log_scrollbar_y.set,
                                 xscrollcommand=log_scrollbar_x.set, 
                                 width=65, height=10, state=tk.NORMAL)
-        self.log_text.insert(tk.END, "【免责声明】:\n--本程序仅用于保护个人信息安全, 请勿用于任何违法犯罪活动--\n--否则后果自负, 开发者对此不承担任何责任--\nConsole output goes here...\n\n")
+        self.log_text.insert(tk.END, "请勿用于非法途径\n")
         self.log_text.configure(state=tk.DISABLED, fg="grey")
         self.log_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)  # 文本框设置为填充BOTH方向，并支持扩展
 

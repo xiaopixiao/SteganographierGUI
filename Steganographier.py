@@ -237,8 +237,15 @@ class SteganographierGUI:
         self.output_option.pack(side=tk.LEFT, padx=5, pady=5)
         
         # 1.2 隐写/解隐写文件拖入窗口
-        self.hide_frame = tk.Frame(self.root, bd=2, relief=tk.GROOVE)
-        self.hide_frame.pack(pady=10)
+        # ...existing code...
+        
+        # 创建一个父框架来包含两个控件
+        self.parent_frame = tk.Frame(self.root, bd=2, relief=tk.GROOVE)
+        self.parent_frame.pack(pady=10)
+        
+        # 隐写控件
+        self.hide_frame = tk.Frame(self.parent_frame, bd=2, relief=tk.GROOVE)
+        self.hide_frame.pack(side=tk.LEFT, padx=5)
         self.hide_label = tk.Label(self.hide_frame, text="在此窗口中批量输入/拖入需要隐写的文件/文件夹:") 
         self.hide_label.pack()
         self.hide_text = tk.Text(self.hide_frame, width=65, height=5)
@@ -246,14 +253,17 @@ class SteganographierGUI:
         self.hide_text.drop_target_register(DND_FILES)
         self.hide_text.dnd_bind("<<Drop>>", self.hide_files_dropped)
         
-        self.reveal_frame = tk.Frame(self.root, bd=2, relief=tk.GROOVE)
-        self.reveal_frame.pack(pady=10)
+        # 解除隐写控件
+        self.reveal_frame = tk.Frame(self.parent_frame, bd=2, relief=tk.GROOVE)
+        self.reveal_frame.pack(side=tk.LEFT, padx=5)
         self.reveal_label = tk.Label(self.reveal_frame, text="在此窗口中批量输入/拖入需要解除隐写的MP4/MKV文件:")
         self.reveal_label.pack()
         self.reveal_text = tk.Text(self.reveal_frame, width=65, height=5)
         self.reveal_text.pack()
         self.reveal_text.drop_target_register(DND_FILES)
         self.reveal_text.dnd_bind("<<Drop>>", self.reveal_files_dropped)
+        
+        # ...existing code...
         
         # 1.3 外壳MP4文件选择相关逻辑
         video_folder_frame = tk.Frame(self.root)

@@ -256,7 +256,7 @@ class SteganographierGUI:
         # 解除隐写控件
         self.reveal_frame = tk.Frame(self.parent_frame, bd=2, relief=tk.GROOVE)
         self.reveal_frame.pack(side=tk.LEFT, padx=5)
-        self.reveal_label = tk.Label(self.reveal_frame, text="在此窗口中批量输入/拖入需要解除隐写的MP4/MKV文件:")
+        self.reveal_label = tk.Label(self.reveal_frame, text="在此窗口中批量输入/拖入需要解除隐写的MP4文件:")
         self.reveal_label.pack()
         self.reveal_text = tk.Text(self.reveal_frame, width=65, height=5)
         self.reveal_text.pack()

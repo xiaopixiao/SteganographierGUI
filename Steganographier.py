@@ -324,11 +324,11 @@ class SteganographierGUI:
         self.clear_button = tk.Button(button_frame, text="清除窗口", command=self.clear, width=12, height=2)
         self.clear_button.pack(side=tk.LEFT, padx=5)
 
-        self.start_hash_modifier_button = tk.Button(button_frame, text="哈希修改器", command=self.start_hash_modifier, width=12, height=2)
-        self.start_hash_modifier_button.pack(side=tk.LEFT, padx=5)
-        
-        self.start_captcha_generator_button = tk.Button(button_frame, text="验证码生成器", command=self.start_captcha_generator, width=12, height=2)
-        self.start_captcha_generator_button.pack(side=tk.LEFT, padx=5)
+        # self.start_hash_modifier_button = tk.Button(button_frame, text="哈希修改器", command=self.start_hash_modifier, width=12, height=2)
+        # self.start_hash_modifier_button.pack(side=tk.LEFT, padx=5)
+        #
+        # self.start_captcha_generator_button = tk.Button(button_frame, text="验证码生成器", command=self.start_captcha_generator, width=12, height=2)
+        # self.start_captcha_generator_button.pack(side=tk.LEFT, padx=5)
         
         # 1.6 进度条
         self.progress = ttk.Progressbar(self.root, length=500, mode='determinate')
@@ -1283,7 +1283,7 @@ if __name__ == "__main__":
     else:  # 在开发环境中运行
         application_path = os.path.dirname(__file__)
 
-    parser = argparse.ArgumentParser(description='隐写者 Ver.1.2.5 CLI 作者: 层林尽染')
+    parser = argparse.ArgumentParser(description='隐写者CLI')
     parser.add_argument('-i', '--input', default=None, help='指定输入文件或文件夹的路径')
     parser.add_argument('-o', '--output', default=None, help='1.指定输出文件名(包含后缀名) [或] 2.输出文件夹路径(默认为原文件名+"hidden")')
     parser.add_argument('-p', '--password', default='', help='设置密码 (默认无密码)')

@@ -1,15 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Apr 22 14:56:41 2024
-
-    隐写者源代码
 
 pip install tkinterdnd2
 pip install pyzipper
 pip install hachoir
 pip install natsort
 
-@author: Cr
 """
 
 import os

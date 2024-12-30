@@ -228,7 +228,7 @@ class SteganographierGUI:
         self.type_option_label = tk.Label(params_frame, text="工作模式:")
         self.type_option_label.pack(side=tk.LEFT, padx=5, pady=5)
         self.type_option_var = tk.StringVar(value=self.type_option_var.get())  # 使用加载的配置
-        self.type_option = tk.OptionMenu(params_frame, self.type_option_var, "mp4", "mkv")
+        self.type_option = tk.OptionMenu(params_frame, self.type_option_var, "mp4")
         self.type_option.config(width=4)
         self.type_option.pack(side=tk.LEFT, padx=5, pady=5)
 
